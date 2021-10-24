@@ -1,6 +1,5 @@
 import hljs from "highlight.js"
 import lox from "./lox"
-import * as R from "rambda"
 
 import "highlight.js/styles/androidstudio.css"
 
@@ -81,17 +80,9 @@ snippets.forEach((snippet) => {
 	const mkEl = <K extends keyof HTMLElementTagNameMap>(tagName: K): HTMLElement => document.createElement(tagName);
 	
 	const pre = mkEl("pre")
-	const code = (R.pipe<"code", HTMLElement, HTMLElement, HTMLElement>(mkEl, classHljs, addCode))("code")
+	const code = addCode(classHljs(mkEl("code")))
 	
 	body.appendChild(pre).appendChild(code);
 })
-
-
-
-// document.querySelectorAll("hljs").forEach((e, i) => {
-// 	e.innerHTML = hljs.highlight(rawCode[i], {language: i == 0 ? "lox" : })
-// })
-
-// document.getElementsByTagName("code")[0].innerHTML = hljs.highlight(rawCode[0], {language: "lox"}).value;
 
 export {}
