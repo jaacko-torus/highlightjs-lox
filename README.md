@@ -10,8 +10,10 @@ To import lox make sure to import the `lox.js`
 
 ```html
 <!-- jsdelivr -->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlightjs-lox@1.0.0/build/dist/lox.js"></script>
 <!-- unpkg -->
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.js"></script>
 <script src="https://unpkg.com/highlightjs-lox@1.0.0/build/dist/lox.js"></script>
 ```
 
