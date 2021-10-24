@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "highlight.js": "./highlightjs.js",
+    "highlight.js/styles/androidstudio.css": "./highlightjs/styles/androidstudio.css"
+  }
+}

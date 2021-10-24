@@ -1,5 +1,7 @@
 # Lox syntax support for [highlight.js](https://highlightjs.org/)
 
+![GitHub all releases](https://img.shields.io/github/downloads/jaacko-torus/highlightjs-lox/total) ![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/highlightjs-lox) ![npm](https://img.shields.io/npm/dm/highlightjs-lox) ![NPM](https://img.shields.io/npm/l/highlightjs-lox) ![npm](https://img.shields.io/npm/v/highlightjs-lox)
+
 This repository provides syntax highlighting for the Lox language using highlight.js.
 
 ## Usage
