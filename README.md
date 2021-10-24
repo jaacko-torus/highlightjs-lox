@@ -1,30 +1,71 @@
-
 # Lox syntax support for [highlight.js](https://highlightjs.org/)
 
+This repository provides syntax highlighting for the Lox language using highlight.js.
+
+## Usage
+
+### Static HTML
+
+To import lox make sure to import the `lox.js`
+
+```html
+<!-- jsdelivr -->
+<script src="https://cdn.jsdelivr.net/npm/highlightjs-lox@1.0.0/build/dist/lox.js"></script>
+<!-- unpkg -->
+<script src="https://unpkg.com/highlightjs-lox@1.0.0/build/dist/lox.js"></script>
+```
+
+and then:
+
+```html
+<script src="/path/to/highlight.js"></script>
+<script src="/path/to/lox.js"></script>
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+```
+
+This will find and highlight code inside of `<pre><code>` tags; it tries to detect the language automatically. If automatic detection doesn’t work for you, you can specify the language in the class attribute:
+
+```html
+<pre>
+	<code class="lox">
+		...
+	</code>
+</pre>
+```
 
 
+### Node or other build system
 
-# New Project
+To add the package run:
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+```sh
+# npm
+npm install highlight.js
+npm install highlightjs-lox
 
-## Available Scripts
+# yarn
+yarn add highlight.js
+yarn add highlightjs-lox
+```
 
-### npm start
+For use with Node/Webpack/Snowpack/Rollup, etc.
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+```js
+import hljs from "highlight.js";
+import lox from "highlightjs-lox"
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+hljs.registerLanguage("lox", lox);
 
-### npm run build
+hljs.initHighlightingOnLoad();
+```
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+## Building
+Go to [highlight.js](https://github.com/highlightjs/highlight.js) and update `lox.js` directly into the library. Then run their build tool:
 
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.mjs` config file.
+```sh
+node ./tools/build.js lox
+```
 
-### Q: What about Eject?
-
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+## [License](./LICENSE.md)

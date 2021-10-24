@@ -1,18 +1,17 @@
 {
 	"name": "highlightjs-lox",
-	"repository": {},
+	"repository": "github:jaacko-torus/highlightjs-lox",
 	"description": "Lox syntax support for highlight.js",
-	"categories": ["lox"],
 	"author": "@jaacko-torus",
 	"version": "1.0.0",
 	"license": "MIT",
+	"main": "build/dist/lox.js",
 	"scripts": {
 		"start": "snowpack dev",
 		"build": "snowpack build"
 	},
 	"dependencies": {
-		"highlight.js": "^11.3.1",
-		"rambda": "^6.9.0"
+		"highlight.js": "^11.3.1"
 	},
 	"devDependencies": {
 		"@snowpack/plugin-typescript": "^1.2.1",

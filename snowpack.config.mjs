@@ -18,7 +18,7 @@ export default {
 		// {"match": "routes", "src": ".*", "dest": "/index.html"},
 	],
 	optimize: {
-		minify: true,
+		// minify: true,
 		/* Example: Bundle your final build: */
 		// "bundle": true,
 	},
