@@ -1,6 +1,6 @@
 {
 	"name": "highlightjs-lox",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "Lox syntax support for highlight.js",
 	"exports": ["./dist"],
 	"repository": "github:jaacko-torus/highlightjs-lox",
