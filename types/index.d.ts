@@ -1,3 +1,13 @@
+interface HLJSRegex {
+	regex: {
+		concat: (...args: (RegExp | string)[]) => string,
+		lookahead: (re: RegExp | string) => string,
+		either: (...args: (RegExp | string)[]) => string,
+		optional: (re: RegExp | string) => string,
+		anyNumberOfTimes: (re: RegExp | string) => string
+	}
+}
+
 /* Use this file to declare any custom file extensions for importing */
 /* Use this folder to also add/extend a package d.ts file, if needed. */
 

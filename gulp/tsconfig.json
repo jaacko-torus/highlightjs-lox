@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"alwaysStrict": true,
+		"esModuleInterop": true,
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"noImplicitAny": true,
+		"outDir": "..",
+		"strict": true,
+		"target": "ESNext"
+	},
+	"include": ["gulpfile.ts"],
+	"exclude": ["node_modules"]
+}

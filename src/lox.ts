@@ -6,9 +6,8 @@
  */
 
 import type { HLJSApi, Language, LanguageFn, Mode } from "highlight.js";
-import hljs from "highlight.js"
-
-const regex = hljs.regex
+import hljs from "highlight.js";
+const regex = (hljs as HLJSApi & HLJSRegex).regex
 
 const IDENT_RE = "[A-Za-z][0-9A-Za-z]*"
 
@@ -42,7 +41,7 @@ const KEYWORDS = {
 	"variable.language": BUILT_IN_VARIABLES
 };
 
-const NUMBER : Mode = {
+const NUMBER: Mode = {
 	scope: "number",
 	variants: [
 		{ begin: "[\\d]+" },
@@ -62,7 +61,7 @@ const PARAMS_CONTAINS = [
 	} as Mode
 ];
 
-const PARAMS : Mode = {
+const PARAMS: Mode = {
 	scope: "params",
 	begin: /\(/,
 	end: /\)/,
@@ -72,7 +71,7 @@ const PARAMS : Mode = {
 	contains: PARAMS_CONTAINS
 };
 
-const CLASS_OR_EXTENDS : Mode = {
+const CLASS_OR_EXTENDS: Mode = {
 	variants: [
 		// class Car < Vehicle
 		{
@@ -106,7 +105,7 @@ const CLASS_OR_EXTENDS : Mode = {
 	]
 };
 
-const FUNCTION_DEFINITION : Mode = {
+const FUNCTION_DEFINITION: Mode = {
 	variants: [
 		{
 			match: [
@@ -126,17 +125,17 @@ const FUNCTION_DEFINITION : Mode = {
 	illegal: /%/
 };
 
-const UPPER_CASE_CONSTANT : Mode = {
+const UPPER_CASE_CONSTANT: Mode = {
 	relevance: 0,
 	match: /\b[A-Z][A-Z0-9]+\b/,
 	scope: "variable.constant"
 };
 
-function noneOf(list : string[]) {
+function noneOf(list: string[]) {
 	return regex.concat("(?!", list.join("|"), ")");
 }
 
-const FUNCTION_CALL : Mode = {
+const FUNCTION_CALL: Mode = {
 	match: regex.concat(
 		/\b/,
 		noneOf(["super"]),
@@ -145,7 +144,7 @@ const FUNCTION_CALL : Mode = {
 	relevance: 0
 };
 
-const PROPERTY_ACCESS : Mode = {
+const PROPERTY_ACCESS: Mode = {
 	begin: regex.concat(/\./, regex.lookahead(
 		regex.concat(IDENT_RE, /(?![0-9A-Za-z(])/)
 	)),
@@ -162,7 +161,7 @@ const PROPERTY_ACCESS : Mode = {
  * @param {HLJSApi} hljs
  * @website http://craftinginterpreters.com/
  */
-const lox : LanguageFn = (hljs : HLJSApi) => {
+const lox: LanguageFn = (hljs: HLJSApi) => {
 	return {
 		name: "Lox",
 		aliases: ["lox"],

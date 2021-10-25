@@ -2,21 +2,44 @@
 	"name": "highlightjs-lox",
 	"repository": "github:jaacko-torus/highlightjs-lox",
 	"description": "Lox syntax support for highlight.js",
-	"author": "@jaacko-torus",
-	"version": "1.0.1",
+	"author": {
+		"email": "jaacko.torus@gmail.com",
+		"name": "jaacko-torus",
+		"url": "https://github.com/jaacko-torus"
+	},
+	"version": "1.1.0",
 	"license": "MIT",
-	"main": "build/dist/lox.js",
+	"type": "module",
+	"engines": {
+		"node": "^16.12.0"
+	},
 	"scripts": {
-		"start": "snowpack dev",
-		"build": "snowpack build"
+		"gulp": "yarn gulp.build && yarn gulp.run",
+		"gulp.build": "tsc --project gulp",
+		"gulp.run": "gulp"
 	},
-	"dependencies": {
-		"highlight.js": "^11.3.1"
-	},
+	"dependencies": {},
 	"devDependencies": {
-		"@snowpack/plugin-typescript": "^1.2.1",
-		"@types/snowpack-env": "^2.3.3",
-		"snowpack": "^3.3.7",
-		"typescript": "^4.2.4"
+		"@babel/cli": "^7.15.7",
+		"@babel/core": "^7.15.8",
+		"@babel/plugin-transform-modules-commonjs": "^7.15.4",
+		"@babel/preset-env": "^7.15.8",
+		"@types/gulp": "^4.0.9",
+		"@types/gulp-babel": "^6.1.30",
+		"@types/gulp-rename": "^2.0.1",
+		"@types/gulp-sourcemaps": "^0.0.35",
+		"@types/gulp-terser": "^1.2.1",
+		"@types/node": "^16.11.5",
+		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
+		"gulp-cli": "^2.3.0",
+		"gulp-rename": "^2.0.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-terser": "^2.1.0",
+		"gulp-typescript": "^6.0.0-alpha.1",
+		"typescript": "^4.4.4"
+	},
+	"peerDependencies": {
+		"highlight.js": "^11.3.1"
 	}
 }
