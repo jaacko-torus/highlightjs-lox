@@ -1,32 +1,41 @@
 # Lox syntax support for [highlight.js](https://highlightjs.org/)
 
-![NPM version](https://img.shields.io/npm/v/highlightjs-lox)
-![NPM license](https://img.shields.io/npm/l/highlightjs-lox)
-![GitHub file size in bytes](https://img.shields.io/github/size/jaacko-torus/highlightjs-lox/build/dist/lox.js)
-![npm](https://img.shields.io/npm/dm/highlightjs-lox)
+<p align="center">
+	<a href="https://www.npmjs.com/package/highlightjs-lox"><img alt="NPM version" src="https://img.shields.io/npm/v/highlightjs-lox"></a>
+	<a href="LICENSE.md"><img alt="GitHub" src="https://img.shields.io/github/license/jaacko-torus/highlightjs-lox"></a>
+	<a href="dist/lox.js"><img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/jaacko-torus/highlightjs-lox/dist/lox.js"></a>
+	<a href="dist/lox.min.js"><img alt="Minified gitHub file size in bytes" src="https://img.shields.io/github/size/jaacko-torus/highlightjs-lox/dist/lox.min.js?label=minified%20size"></a>
+	<a href="https://npmstats.org/highlightjs-lox"><img alt="npm" src="https://img.shields.io/npm/dm/highlightjs-lox"></a>
+</p>
 
 This repository provides syntax highlighting for the Lox language using highlight.js.
+
+## Dependencies
+
+```json
+{
+	"highlight.js": "^11.3.1"
+}
+```
 
 ## Usage
 
 ### Static HTML
 
-To import lox make sure to import the `lox.js`
+To import lox make sure to include `lox.js` in the HTML:
 
 ```html
 <!-- jsdelivr -->
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/highlightjs-lox@1.0.1/build/dist/lox.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlightjs-lox/dist/lox.js"></script>
 <!-- unpkg -->
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.js"></script>
-<script src="https://unpkg.com/highlightjs-lox@1.0.1/build/dist/lox.js"></script>
+<script src="https://unpkg.com/highlightjs-lox/dist/lox.js"></script>
 ```
 
 and then:
 
 ```html
-<script src="/path/to/highlight.js"></script>
-<script src="/path/to/lox.js"></script>
 <script>
 	hljs.initHighlightingOnLoad();
 </script>
@@ -41,7 +50,6 @@ This will find and highlight code inside of `<pre><code>` tags; it tries to dete
 	</code>
 </pre>
 ```
-
 
 ### Node or other build system
 

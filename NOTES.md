@@ -1,2 +1,0 @@
-- look at https://github.com/YousefED/typescript-json-schema
-- https://github.com/terser/terser

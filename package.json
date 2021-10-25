@@ -1,13 +1,14 @@
 {
 	"name": "highlightjs-lox",
-	"repository": "github:jaacko-torus/highlightjs-lox",
+	"version": "1.1.1",
 	"description": "Lox syntax support for highlight.js",
+	"exports": ["./dist"],
+	"repository": "github:jaacko-torus/highlightjs-lox",
 	"author": {
 		"email": "jaacko.torus@gmail.com",
 		"name": "jaacko-torus",
 		"url": "https://github.com/jaacko-torus"
 	},
-	"version": "1.1.0",
 	"license": "MIT",
 	"type": "module",
 	"engines": {
