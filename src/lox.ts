@@ -5,8 +5,12 @@
  * @license MIT
  */
 
+import type { HLJSRegex } from "../types";
 import type { HLJSApi, Language, LanguageFn, Mode } from "highlight.js";
 import hljs from "highlight.js";
+
+console.log(hljs)
+
 const regex = (hljs as HLJSApi & HLJSRegex).regex
 
 const IDENT_RE = "[A-Za-z][0-9A-Za-z]*"

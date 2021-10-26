@@ -15,6 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  * @website http://craftinginterpreters.com/
  * @license MIT
  */
+console.log(_highlight["default"]);
 var regex = _highlight["default"].regex;
 var IDENT_RE = "[A-Za-z][0-9A-Za-z]*";
 var LANGUAGE_KEYWORDS = ["class", "else", "for", "function", "if", "print", "return", "var", "while"];

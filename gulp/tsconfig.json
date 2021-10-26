@@ -5,6 +5,8 @@
 		"module": "ESNext",
 		"moduleResolution": "Node",
 		"noImplicitAny": true,
+		"sourceMap": true,
+		"isolatedModules": true,
 		"outDir": "..",
 		"strict": true,
 		"target": "ESNext"
