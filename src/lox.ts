@@ -5,7 +5,7 @@
  * @license MIT
  */
 
-// import type { HLJSRegex } from "../types"
+import type { HLJSRegex } from "../types"
 import type { HLJSApi, Language, LanguageFn, Mode } from "highlight.js"
 import hljs from "highlight.js"
 

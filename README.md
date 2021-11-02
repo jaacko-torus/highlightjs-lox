@@ -1,11 +1,18 @@
 # Lox syntax support for [highlight.js](https://highlightjs.org/)
 
 <p align="center">
-	<a href="https://www.npmjs.com/package/highlightjs-lox"><img alt="NPM version" src="https://img.shields.io/npm/v/highlightjs-lox"></a>
-	<a href="LICENSE.md"><img alt="GitHub" src="https://img.shields.io/github/license/jaacko-torus/highlightjs-lox"></a>
-	<a href="dist/lox.js"><img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/jaacko-torus/highlightjs-lox/dist/lox.js"></a>
-	<a href="dist/lox.min.js"><img alt="Minified gitHub file size in bytes" src="https://img.shields.io/github/size/jaacko-torus/highlightjs-lox/dist/lox.min.js?label=minified%20size"></a>
-	<a href="https://npmstats.org/highlightjs-lox"><img alt="npm" src="https://img.shields.io/npm/dm/highlightjs-lox"></a>
+	<a href="https://www.npmjs.com/package/highlightjs-lox">
+		<img alt="NPM version" src="https://img.shields.io/npm/v/highlightjs-lox">
+	</a>
+	<a href="LICENSE.md">
+		<img alt="GitHub" src="https://img.shields.io/github/license/jaacko-torus/highlightjs-lox">
+		</a>
+	<a href="https://bundlephobia.com/package/highlightjs-lox">
+		<img alt="Bundlephobia NPM bundle size" src="https://img.shields.io/bundlephobia/min/highlightjs-lox">
+	</a>
+	<a href="https://npmstats.org/highlightjs-lox">
+		<img alt="npm" src="https://img.shields.io/npm/dm/highlightjs-lox">
+	</a>
 </p>
 
 This repository provides syntax highlighting for the Lox language using highlight.js.
@@ -20,6 +27,8 @@ This repository provides syntax highlighting for the Lox language using highligh
 
 ## Usage
 
+Provided in the [`dist/`](dist) folder are 5 versions: `iife` (for browsers), `es`, `umd`, `cjs`, and `amd`. Choose whatever version you like :smile:.
+
 ### Static HTML
 
 To import lox make sure to include `lox.js` in the HTML:
@@ -27,10 +36,10 @@ To import lox make sure to include `lox.js` in the HTML:
 ```html
 <!-- jsdelivr -->
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/highlightjs-lox/dist/lox.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlightjs-lox/dist/iife/lox.js"></script>
 <!-- unpkg -->
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.js"></script>
-<script src="https://unpkg.com/highlightjs-lox/dist/lox.js"></script>
+<script src="https://unpkg.com/highlightjs-lox/dist/iife/lox.js"></script>
 ```
 
 and then:
@@ -51,7 +60,9 @@ This will find and highlight code inside of `<pre><code>` tags; it tries to dete
 </pre>
 ```
 
-### Node or other build system
+### Node or other build systems
+
+[ES Modules](dest/es), [CommonJS](dest/cjs), [AMD](dest/amd) and [UMD](dest/umd) can all be found in the [`dest/`](dest) folder.
 
 To add the package run:
 
@@ -65,15 +76,21 @@ yarn add highlight.js
 yarn add highlightjs-lox
 ```
 
-For use with Node/Webpack/Snowpack/Rollup/Vite, etc.
+#### ES6+ module syntax
 
 ```js
-import hljs from "highlight.js";
+import hljs from "highlight.js"
 import lox from "highlightjs-lox"
 
-hljs.registerLanguage("lox", lox);
+hljs.registerLanguage("lox", lox)
+hljs.initHighlightingOnLoad()
+```
 
-hljs.initHighlightingOnLoad();
+#### CommonJS syntax
+
+```js
+const hljs = require("highlight.js")
+const lox = require("highlightjs-lox")
 ```
 
 ### Demos

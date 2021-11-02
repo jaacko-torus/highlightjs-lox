@@ -1,6 +1,6 @@
 {
 	"name": "highlightjs-lox",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Lox syntax support for highlight.js",
 	"main": "dist/cjs/lox.js",
 	"module": "dist/es/lox.js",
@@ -25,7 +25,7 @@
 	"scripts": {
 		"rollup": "yarn rollup:build && yarn rollup:run",
 		"rollup:build": "tsc --project rollup",
-		"rollup:run": "rollup --config rollup/rollup.config.js"
+		"rollup:run": "rollup --config"
 	},
 	"dependencies": {
 		"highlight.js": "^11.3.1"
