@@ -1,0 +1,23 @@
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Animal</span> {
+	<span class="hljs-title function_">constructor</span>(<span class="hljs-params">name</span>) {
+		<span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name;
+	}
+	
+	<span class="hljs-title function_">speak</span>(<span class="hljs-params"></span>) {
+		<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-variable language_">this</span>.name}</span> makes a noise.`</span>);
+	}
+}
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">Animal</span> {
+	<span class="hljs-title function_">constructor</span>(<span class="hljs-params">name</span>) {
+		<span class="hljs-comment">// call the super class constructor and pass in the name parameter</span>
+		<span class="hljs-variable language_">super</span>(name);
+	}
+	
+	<span class="hljs-title function_">speak</span>(<span class="hljs-params"></span>) {
+		<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-variable language_">this</span>.name}</span> barks.`</span>);
+	}
+}
+
+<span class="hljs-keyword">let</span> d = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Dog</span>(<span class="hljs-string">&#x27;Mitzie&#x27;</span>);
+d.<span class="hljs-title function_">speak</span>(); <span class="hljs-comment">// Mitzie barks.</span>

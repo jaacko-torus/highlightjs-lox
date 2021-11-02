@@ -9,10 +9,11 @@
 		"moduleResolution": "Node",
 		"noEmit": true,
 		"noImplicitAny": true,
+		"outDir": "dist",
 		"skipLibCheck": true,
 		"strict": true,
 		"target": "ES2015"
 	},
-	"include": [".", "../types"],
+	"include": ["src/**/*.ts", "types/**/*.ts"],
 	"exclude": ["node_modules"]
 }

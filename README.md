@@ -65,7 +65,7 @@ yarn add highlight.js
 yarn add highlightjs-lox
 ```
 
-For use with Node/Webpack/Snowpack/Rollup, etc.
+For use with Node/Webpack/Snowpack/Rollup/Vite, etc.
 
 ```js
 import hljs from "highlight.js";
@@ -75,6 +75,9 @@ hljs.registerLanguage("lox", lox);
 
 hljs.initHighlightingOnLoad();
 ```
+
+### Demos
+If you would like to see some more in depth examples you can check out [the demo folder](demo)
 
 ## Building
 Go to [highlight.js](https://github.com/highlightjs/highlight.js) and update `lox.js` directly into the library. Then run their build tool:
