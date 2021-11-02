@@ -1,15 +1,13 @@
 /**
  * @name Lox
- * @param {LanguageFn} hljs
+ * @author jaacko-torus <jaacko.torus@gmail.com> (https://github.com/jaacko-torus)
  * @website http://craftinginterpreters.com/
  * @license MIT
  */
 
-import type { HLJSRegex } from "../types";
-import type { HLJSApi, Language, LanguageFn, Mode } from "highlight.js";
-import hljs from "highlight.js";
-
-console.log(hljs)
+// import type { HLJSRegex } from "../types"
+import type { HLJSApi, Language, LanguageFn, Mode } from "highlight.js"
+import hljs from "highlight.js"
 
 const regex = (hljs as HLJSApi & HLJSRegex).regex
 
@@ -158,14 +156,12 @@ const PROPERTY_ACCESS: Mode = {
 	relevance: 0
 };
 
-// HLJSApi
-
 /**
  * @name Lox
  * @param {HLJSApi} hljs
  * @website http://craftinginterpreters.com/
  */
-const lox: LanguageFn = (hljs: HLJSApi) => {
+function lox(hljs: HLJSApi) {
 	return {
 		name: "Lox",
 		aliases: ["lox"],
@@ -232,4 +228,4 @@ const lox: LanguageFn = (hljs: HLJSApi) => {
 	} as Language;
 }
 
-export default lox;
+export default lox as LanguageFn;
