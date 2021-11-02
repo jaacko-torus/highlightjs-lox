@@ -22,7 +22,7 @@
 	"license": "MIT",
 	"type": "module",
 	"engines": {
-		"node": "^16.12.0"
+		"node": ">=10.24.x"
 	},
 	"scripts": {
 		"rollup": "yarn rollup:build && yarn rollup:run",
