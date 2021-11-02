@@ -18,7 +18,7 @@ Finally, in case you are using it in Node, and don't want to use `"type": "modul
 
 All the demos, unless otherwise stated, are under the MIT license.
 
-```md
+```txt
 Copyright (c) 2021 Julián A. Avar C.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
