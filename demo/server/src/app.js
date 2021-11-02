@@ -61,7 +61,10 @@ d.speak(); // Mitzie barks.
 	}
 ]
 
-/** @see [source](https://stackoverflow.com/a/65615651/9564132) */
+/**
+ * @license [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+ * @see [source](https://stackoverflow.com/a/65615651/9564132)
+ */
 async function isExists(path) {
 	try {
 		await fs.access(path);
@@ -71,7 +74,10 @@ async function isExists(path) {
 	}
 };
 
-/** @see [source](https://stackoverflow.com/a/65615651/9564132) */
+/**
+ * @license [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+ * @see [source](https://stackoverflow.com/a/65615651/9564132)
+ */
 async function writeFile(filePath, data) {
 	try {
 		const dirname = path.dirname(filePath);

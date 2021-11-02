@@ -27,7 +27,7 @@ This repository provides syntax highlighting for the Lox language using highligh
 
 ## Usage
 
-Provided in the [`dist/`](dist) folder are 5 versions: `iife` (for browsers), `es`, `umd`, `cjs`, and `amd`. Choose whatever version you like :smile:.
+Provided in the [`dist/`](dist) folder are 5 versions: `iife` (for browsers), `es`, `umd`, `cjs`, and `amd` (+ [`lox.mjs`](dist/es/lox.min.mjs) & [`lox.cjs`](dist/cjs/lox.cjs) in case they're needed). `min` and `map` files included also :sunglasses:.
 
 ### Static HTML
 
@@ -46,6 +46,7 @@ and then:
 
 ```html
 <script>
+	hljs.registerLanguage("lox", lox)
 	hljs.initHighlightingOnLoad();
 </script>
 ```
@@ -62,7 +63,7 @@ This will find and highlight code inside of `<pre><code>` tags; it tries to dete
 
 ### Node or other build systems
 
-[ES Modules](dest/es), [CommonJS](dest/cjs), [AMD](dest/amd) and [UMD](dest/umd) can all be found in the [`dest/`](dest) folder.
+[ES Modules](dist/es), [CommonJS](dist/cjs), [AMD](dist/amd) and [UMD](dist/umd) can all be found in the [`dist/`](dist) folder.
 
 To add the package run:
 
