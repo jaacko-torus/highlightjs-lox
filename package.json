@@ -16,10 +16,9 @@
 		"node": "^16.12.0"
 	},
 	"scripts": {
-		"dev": "tsc --watch",
-		"gulp": "yarn gulp.build && yarn gulp.run",
-		"gulp.build": "tsc --project gulp",
-		"gulp.run": "gulp"
+		"rollup": "yarn rollup:build && yarn rollup:run",
+		"rollup:build": "tsc --project rollup",
+		"rollup:run": "rollup --config rollup/rollup.config.js"
 	},
 	"dependencies": {
 		"highlight.js": "^11.3.1"
