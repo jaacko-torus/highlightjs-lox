@@ -1,13 +1,15 @@
 {
 	"name": "highlightjs-lox",
-	"version": "2.0.2",
+	"version": "2.0.3",
 	"description": "Lox syntax support for highlight.js",
 	"main": "dist/cjs/lox.js",
 	"module": "dist/es/lox.js",
 	"browser": "dist/iife/lox.js",
+	"types": "types/index.d.ts",
 	"files": [
 		"src",
 		"dist",
+		"types",
 		"README.md",
 		"LICENSE.md"
 	],

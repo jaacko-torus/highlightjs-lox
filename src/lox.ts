@@ -5,7 +5,7 @@
  * @license MIT
  */
 
-import type { HLJSRegex } from "../types"
+import type { HLJSRegex } from "../types/util"
 import type { HLJSApi, Language, LanguageFn, Mode } from "highlight.js"
 import hljs from "highlight.js"
 
@@ -228,4 +228,4 @@ function lox(hljs: HLJSApi) {
 	} as Language;
 }
 
-export default lox as LanguageFn;
+export default lox as LanguageFn
