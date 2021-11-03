@@ -6,6 +6,13 @@
 	"module": "dist/es/lox.mjs",
 	"browser": "dist/iife/lox.js",
 	"types": "dist/types/lox.d.ts",
+	"exports": {
+		"require": "./dist/cjs/lox.cjs",
+		"import": "./dist/es/lox.mjs",
+		"node": "./dist/umd/lox.js",
+		"browser": "./dist/iife/lox.js",
+		"default": "./dist/iife/lox.js"
+	},
 	"files": [
 		"src",
 		"dist",
